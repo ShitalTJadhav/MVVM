@@ -14,6 +14,13 @@
 		53F94D3C21E63B5D00015B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F94D3A21E63B5D00015B9E /* LaunchScreen.storyboard */; };
 		53F94D4721E63B5D00015B9E /* MVVMDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D4621E63B5D00015B9E /* MVVMDemoTests.swift */; };
 		53F94D5221E63B5D00015B9E /* MVVMDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D5121E63B5D00015B9E /* MVVMDemoUITests.swift */; };
+		53F94D6421E63C7000015B9E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D6321E63C7000015B9E /* NetworkHelper.swift */; };
+		53F94D6821E63D9000015B9E /* HomeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D6721E63D9000015B9E /* HomeFeed.swift */; };
+		53F94D6A21E63DEC00015B9E /* HomeFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D6921E63DEC00015B9E /* HomeFeedViewModel.swift */; };
+		53F94D6C21E6413300015B9E /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D6B21E6413300015B9E /* HomeFeedViewController.swift */; };
+		53F94D6E21E641C100015B9E /* HomeFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D6D21E641C100015B9E /* HomeFeedCell.swift */; };
+		53F94D7321E7424E00015B9E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D7221E7424E00015B9E /* Reachability.swift */; };
+		53F94D7521E7714400015B9E /* HomeFeedModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F94D7421E7714400015B9E /* HomeFeedModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		53F94D4D21E63B5D00015B9E /* MVVMDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F94D5121E63B5D00015B9E /* MVVMDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUITests.swift; sourceTree = "<group>"; };
 		53F94D5321E63B5D00015B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F94D6321E63C7000015B9E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		53F94D6721E63D9000015B9E /* HomeFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeed.swift; sourceTree = "<group>"; };
+		53F94D6921E63DEC00015B9E /* HomeFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewModel.swift; sourceTree = "<group>"; };
+		53F94D6B21E6413300015B9E /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		53F94D6D21E641C100015B9E /* HomeFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedCell.swift; sourceTree = "<group>"; };
+		53F94D7221E7424E00015B9E /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		53F94D7421E7714400015B9E /* HomeFeedModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,12 @@
 		53F94D3021E63B5900015B9E /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				53F94D6221E63C4800015B9E /* NetworkService */,
+				53F94D6021E63C1F00015B9E /* View */,
+				53F94D5F21E63C0B00015B9E /* ViewModel */,
+				53F94D6121E63C2900015B9E /* Model */,
 				53F94D3121E63B5900015B9E /* AppDelegate.swift */,
+				53F94D7121E7424E00015B9E /* Reachability */,
 				53F94D3321E63B5900015B9E /* ViewController.swift */,
 				53F94D3521E63B5900015B9E /* Main.storyboard */,
 				53F94D3821E63B5D00015B9E /* Assets.xcassets */,
@@ -112,6 +131,7 @@
 			children = (
 				53F94D4621E63B5D00015B9E /* MVVMDemoTests.swift */,
 				53F94D4821E63B5D00015B9E /* Info.plist */,
+				53F94D7421E7714400015B9E /* HomeFeedModelTest.swift */,
 			);
 			path = MVVMDemoTests;
 			sourceTree = "<group>";
@@ -123,6 +143,47 @@
 				53F94D5321E63B5D00015B9E /* Info.plist */,
 			);
 			path = MVVMDemoUITests;
+			sourceTree = "<group>";
+		};
+		53F94D5F21E63C0B00015B9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				53F94D6921E63DEC00015B9E /* HomeFeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		53F94D6021E63C1F00015B9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53F94D6B21E6413300015B9E /* HomeFeedViewController.swift */,
+				53F94D6D21E641C100015B9E /* HomeFeedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53F94D6121E63C2900015B9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53F94D6721E63D9000015B9E /* HomeFeed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53F94D6221E63C4800015B9E /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				53F94D6321E63C7000015B9E /* NetworkHelper.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		53F94D7121E7424E00015B9E /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				53F94D7221E7424E00015B9E /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +318,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F94D3421E63B5900015B9E /* ViewController.swift in Sources */,
+				53F94D6421E63C7000015B9E /* NetworkHelper.swift in Sources */,
+				53F94D6E21E641C100015B9E /* HomeFeedCell.swift in Sources */,
 				53F94D3221E63B5900015B9E /* AppDelegate.swift in Sources */,
+				53F94D6821E63D9000015B9E /* HomeFeed.swift in Sources */,
+				53F94D6A21E63DEC00015B9E /* HomeFeedViewModel.swift in Sources */,
+				53F94D7321E7424E00015B9E /* Reachability.swift in Sources */,
+				53F94D6C21E6413300015B9E /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F94D7521E7714400015B9E /* HomeFeedModelTest.swift in Sources */,
 				53F94D4721E63B5D00015B9E /* MVVMDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
